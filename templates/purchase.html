@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Покупка автомобиля</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Покупка автомобиля</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Главная</a>
+            <a href="{{ url_for('car_list') }}">Список автомобилей</a>
+            <a href="{{ url_for('about') }}">О нас</a>
+            <a href="{{ url_for('contact') }}">Контакты</a>
+            <a href="{{ url_for('faq') }}">FAQ</a>
+        </nav>
+    </header>
+    <main>
+        <div class="car-details">
+            <img src="{{ url_for('static', filename='img/' + car['image']) }}" alt="{{ car['make'] }} {{ car['model'] }}">
+            <div class="car-info">
+                <h2>{{ car['make'] }} {{ car['model'] }} ({{ car['year'] }})</h2>
+                <p>Цена: ${{ car['price'] }}</p>
+                <p>{{ car['description'] }}</p>
+                <h3>Особенности:</h3>
+                <ul>
+                    {% for feature in car['features'] %}
+                    <li>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+                <form method="post">
+                    <button type="submit" class="buy-button">Купить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

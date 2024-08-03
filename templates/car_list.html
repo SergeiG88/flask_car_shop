@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список автомобилей</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Список автомобилей</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Главная</a>
+            <a href="{{ url_for('car_list') }}">Список автомобилей</a>
+            <a href="{{ url_for('about') }}">О нас</a>
+            <a href="{{ url_for('contact') }}">Контакты</a>
+            <a href="{{ url_for('faq') }}">FAQ</a>
+        </nav>
+    </header>
+    <main>
+        <ul class="car-list">
+            {% for car in cars %}
+            <li class="car-item">
+                <img src="{{ url_for('static', filename='img/' + car['image']) }}" alt="{{ car['make'] }} {{ car['model'] }}">
+                <div class="car-info">
+                    <h2>{{ car['make'] }} {{ car['model'] }} ({{ car['year'] }})</h2>
+                    <p>Цена: ${{ car['price'] }}</p>
+                    <p>{{ car['description'] }}</p>
+                    <h3>Особенности:</h3>
+                    <ul>
+                        {% for feature in car['features'] %}
+                        <li>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{{ url_for('purchase', car_id=car['id']) }}" class="buy-button">Купить</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

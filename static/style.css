@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.car-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.car-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+    width: 800px;
+    overflow: hidden;
+    display: flex;
+    text-align: left;
+}
+
+.car-item img {
+    max-width: 450px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    border-right: 1px solid #ddd;
+}
+
+.car-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-info h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.car-info p {
+    color: #777;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.car-info h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.car-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.car-info ul li {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAYAAAICX2euAAAABHNCSVQICAgIfAhkiAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACpSURBVHjadFLLDYAwDH0tzdcICU2doFRMIk5SC+jlwwIwhJQFIuQkXWCp+ABXwLDWE0kNKlLP3BB3PceH6/y1G5IcHHEwjiMrnVkhJU0UJcylYAlkTeP91n2WGCoGoNdc7r7YFECALey9LNiMIHh4CBe9XU+1Pd57mOwCAHiP2+orMzw4CtGyH6oMOIqiI1la0ujEKMhaRiGUuy7/AD4Q5ryNRLf+0AAAAASUVORK5CYII=') no-repeat left center;
+    padding-left: 20px;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.buy-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+/* Стили для новых страниц */
+form {
+    max-width: 800px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+dl {
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 1rem 0;
+}
+
+/* Стили для заголовка h2 .centered*/
+.centered {
+    text-align: center;
+}

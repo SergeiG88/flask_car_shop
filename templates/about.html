@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>О нас</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>О нас</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Главная</a>
+            <a href="{{ url_for('car_list') }}">Список автомобилей</a>
+            <a href="{{ url_for('contact') }}">Контакты</a>
+            <a href="{{ url_for('faq') }}">FAQ</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Наша компания</h2>
+        <p>Мы — ведущий автомобильный магазин, предлагающий широкий ассортимент новых и подержанных автомобилей. Наша миссия — предоставить нашим клиентам качественные автомобили по конкурентоспособным ценам.</p>
+        <img src="{{ url_for('static', filename='img/auto_shops.jpg') }}" alt="Наши автомобили">
+    </main>
+</body>
+</html>
